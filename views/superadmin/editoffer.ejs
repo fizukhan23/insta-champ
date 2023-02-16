@@ -1,0 +1,68 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+<%- include('partials/sidebar') %>
+
+<div>
+    <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Edit offer</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href=<%= baseURL %>/superadmin-login/>Home</a></li>
+              <li class="breadcrumb-item active">Offer Form</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6" style="margin-left:150px;">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Edit offer</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+    
+          <form action="<%= baseURL%>/superadmin-login/offer-edit/<%= offer.sno%>" method="post" >
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="Code">Code</label>
+                        <input type="text" class="form-control" placeholder="code" name="code" value="<%=offer.code%>">
+                    </div>
+                  <div class="form-group">
+                      <label for="description">Description</label>
+                      <input type="text" class="form-control"  placeholder="offerdata" name="offerdata" value="<%=offer.offerdata%>">
+                  </div>
+                 <div class="form-group">
+                    <label for="validtill">Validtill</label>
+                    <input type="date" class="form-control"  placeholder="validtill" name="validtill" value="<%=offer.validtill%>">
+                  </div>
+                    <div class="form-group">
+                       <div class="form-group">
+                        <label><strong>status</strong></label><br>
+                        <label><input type="radio" name="status" value="active" >Active</label>
+                        <label><input type="radio" name="status" value="inactive" >Inactive</label>
+                        </div>
+                    </div>
+                  </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+</div>

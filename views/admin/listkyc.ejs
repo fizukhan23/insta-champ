@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+<%- include('partials/sidebar') %>
+
+<div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2" >
+          <div class="col-sm-6">
+            <h1>View kyc </h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="<%= baseURL %>/admin-login/">Home</a></li>
+              <li class="breadcrumb-item active">View kyc list </li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+ <!-- Main content -->
+  
+    <section class="content">
+      <div class="container-fluid"> 
+
+
+<div class="row">
+          <!-- left column-->
+          <div class="col-md-24" style="padding:10px;">
+            <!--general form elements -->
+            <div class="card card-primary" >
+              <div class="card-header" >
+                <h3 class="card-title">View User</h3>
+              </div>
+              <!-- /.card-header -->
+               
+                <table class="table table-bordered" >
+                <thead>
+                    <th style="width:2px">#</th>
+                    <th>UID</th>
+                    <th>KYC SCREENSHOT</th>
+                    <th style="width: 40px">ACTION</th>
+</thead>
+<tbody>
+    <% users.forEach(function(user,index){ %>
+            <tr>
+                <td><%= index+1 %></td>
+                <td><%= user.uid %></td>
+                <td><%= user.kyc%>
+                </td>
+                <td>
+                    <a href="<%= baseURL %>/admin-login/user-edit/<%=user.uid%>" class="btn btn-block btn-primary "><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
+            </tr>
+    <% }); %>
+</tbody>
+
+</table> 
+
+
+<%- include('partials/footer') %>

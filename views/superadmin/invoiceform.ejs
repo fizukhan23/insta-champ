@@ -1,0 +1,186 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+<%- include('partials/sidebar') %>
+
+<div>
+    <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Add Invoice</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href=<%= baseURL %>/superadmin-login/>Home</a></li>
+              <li class="breadcrumb-item active">Add invoice Form</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6" style="margin-left:150px;">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Add Invoice</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+    
+          <form action="<%= baseURL%>/superadmin-login/add-invoice/<%=uid%>" method="post">
+                <div class="card-body">
+                   <div class="form-group">
+                    <label for="Date">Date<span>*</span></label>
+                    <input type="Date" class="form-control"  placeholder="Date" name="date" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="Buyer Name">Recipt Number<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Recipt number" name="Re_number" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="Buyer Name">Issued To<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Buyer Name" name="buyer_name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Amount">Amount Paid<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Amount" name="amount" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="paid_on">Paid on<span>*</span></label>
+                    <input type="date" class="form-control"  placeholder="paid on" name="paid_on" required>
+                  </div>  
+                  <div class="form-group">
+                    <label for="description">Description<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="invoicedata" name="invoicedata" required>
+                  </div>   
+                 <div class="form-group">
+                    <label for="Quantity">Quantity<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="quantity" name="quantity" required>
+                  </div>
+                  
+                   <div class="form-group">
+                    <label for="Product">Price<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Product" name="product" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="GST">GST<span>*</span></label>
+                    <input id="gst" type="text" class="form-control"  placeholder="GST" name="gst" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="GST">Sub total<span>*</span></label>
+                    <input id="sub_total" type="text" class="form-control"  placeholder="sub_total" name="sub_total" required>
+                  </div>
+                <div class="form-group">
+                    <label for="Total Price">Total Price<span>*</span></label>
+                    <input id = "total_price" type="text" class="form-control"  placeholder="Total Price" name="total_price" required >
+                  </div>
+                 
+                  
+                  </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" name="submit" onclick="sum()" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+</div>
+
+
+<div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2" >
+          <div class="col-sm-6">
+            <h1>View Invoice</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="<%= baseURL %>/superadmin-login/">Home</a></li>
+              <li class="breadcrumb-item active">View Ivoice Data</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+ <!-- Main content -->
+  
+    <section class="content">
+      <div class="container-fluid"> 
+
+
+<div class="row">
+          <!-- left column-->
+          <div class="col-md-24" style="padding:20px;">
+            <!--general form elements -->
+            <div class="card card-primary" >
+              <div class="card-header" >
+                <h3 class="card-title">View Invoice</h3>
+              </div>
+              <!-- /.card-header -->
+               
+                <table class="table table-bordered" >
+                <thead>
+                    <th style="width:2px">SNO</th>
+                    <th>UID</th> 
+                    <th>DATE</th>
+                    <th>RECIPT NUMBER</th>
+                    <th>ISSUED TO</th>
+                    <th>AMOUNT PAID</th>
+                    <th>PAID ON</th>
+                    <th>DESCRIPTION</th>
+                    <th>QUANTITY</th>
+                    <th>PRICE</th>
+                    <th>GST</th>
+                    <th>SUB TOTAL</th>
+                    <th>TOTAL PRICE</th>
+                   <th style="width: 40px">ACTION</th>
+</thead>
+<tbody>
+    <% invoices.forEach(function(invoices,index){ %>
+            <tr>
+                 <td><%= index+1 %></td>
+                <td><%= invoices.uid %></td>
+                <% if(invoices.date){ %>
+                <td><%= invoices.date.toString().substring(0, 10) %></td>
+                <% } %>
+                <td><%= invoices.Re_number %></td>
+                <td><%= invoices.buyer_name %></td>
+                <td><%= invoices.amount %></td>
+                <% if(invoices.paid_on){ %>
+                <td><%= invoices.paid_on.toString().substring(0, 10) %></td>
+                <% } %>
+                <td><%= invoices.invoicedata %></td>
+                <td><%= invoices.quantity %></td>
+                <td><%= invoices.product %></td>
+                <td><%= invoices.gst %></td>
+                <td><%= invoices.sub_total %></td>
+                <td><%= invoices.total_price %></td>
+                
+                <td>
+                    <a href="<%= baseURL %>/superadmin-login/edit-invoice/<%=invoices.uid%>" class="btn btn-block btn-primary "><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="<%= baseURL %>/superadmin-login/invoice-delete/<%=invoices.sno%>" class="btn btn-block btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+                </td>
+            </tr>
+    <% }); %>
+           
+
+</tbody>
+
+</table> 
+
+
+
+<%- include('partials/footer') %> 

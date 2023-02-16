@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+        html,
+        body {
+            min-height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+            font-weight: 400;
+            color: #db377b;
+            text-align:center;
+        }
+
+        p {
+            margin: 0 0 5px;
+        }
+
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #db377b;
+        }
+
+        form {
+            padding: 25px;
+            margin: 25px;
+            box-shadow: 0 2px 5px #f5f5f5;
+            background: #f5f5f5;
+            
+        }
+
+        .fas {
+            margin: 25px 10px 0;
+            font-size: 72px;
+            color: #fff;
+        }
+
+        .fa-envelope {
+            transform: rotate(-20deg);
+        }
+
+        .fa-at,
+        .fa-mail-bulk {
+            transform: rotate(10deg);
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 18px);
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #db377b;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #666;
+        }
+
+        select::placeholder {
+            color: #666;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #db377b;
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        button:hover {
+            background: #db377b;
+        }
+
+        @media (min-width: 568px) {
+            .main-block {
+                flex-direction: row;
+            }
+
+            .left-part,
+            form {
+                width: 50%;
+            }
+
+            .fa-envelope {
+                margin-top: 0;
+                margin-left: 20%;
+            }
+
+            .fa-at {
+                margin-top: -10%;
+                margin-left: 65%;
+            }
+
+            .fa-mail-bulk {
+                margin-top: 2%;
+                margin-left: 28%;
+            }
+        }
+
+        .btn-block {
+            width: 80px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .login button{
+            background-color:#ffff;
+            color:black;
+            width:20%;
+            margin-left:40%;
+            margin-top:20%;
+        }
+        #submit{
+             width:20%;
+              margin-top:5%;
+               background: #db377b;
+        }
+        .btn-2{
+            width:40%;
+            margin-left:50%;
+            background-color:#fff;
+            
+        }
+        .GFG{
+            background-color:#fff;
+            color:black;
+            width:30%;
+             margin-top:30%;
+           
+        }
+       
+
+        
+        
+      
+    </style>
+</head>
+
+<body>
+    <div class="main-block">
+        <div class="left-part">
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-at"></i>
+            <i class="fas fa-mail-bulk"></i>
+ 
+ 
+ <a href='<%= baseURL%>/superadmin-login/Adminloginpage'>
+        <button class="GFG">
+            login Here
+        </button>
+    </a>
+        </div>
+                        
+            <form action="<%= baseURL%>/superadmin-login/admin-insert" method="post" enctype="multipart/form-data">
+                     <h1>Admin Registration Form</h1>
+            <fieldset>
+         
+                <legend>Admin /Branch user Primary Contact</legend>
+                <div class="colums">
+                    <div class="item">
+                        <label for="document">Kyc Document<span>*</span></label>
+                        <input id="document" type="file" accept='image/*' placeholder="document" name="kyc_document" enctype="multipart/form-data" multiple required />
+                    </div>
+                    <div class="item">
+                        <label for="anumber">Aadhar Card Number<span>*</span></label>
+                        <input id="anumber" type="file" accept='image/*' placeholder="Aadhar Number" name="aadhar" enctype="multipart/form-data" multiple required />
+                    </div>
+                    <div class="item">
+                        <label for="Pnumber">Pen Card Number<span>*</span></label>
+                        <input id="Pnumber" type="file"  accept='image/*' placeholder="Pnumber" name="pan_card" enctype="multipart/form-data" multiple required />
+                    </div>
+                    <div class="item">
+                        <label for="fname">Full Name<span>*</span></label>
+                        <input id="fname" type="text" placeholder="fname" name="fullname" required />
+                    </div>
+                    <div class="item">
+                        <label for="dob">Date Of Birth<span>*</span></label>
+                        <input id="dob" type="date" placeholder="dob" name="dob" required />
+                    </div>
+                    <div class="item">
+                        <label for="email">Email<span>*</span></label>
+                        <input id="email" type="text" placeholder="email" name="email" required />
+                    </div>
+                      <div class="item">
+                        <label for="password">Password<span>*</span></label>
+                        <input id="password" type="password" placeholder="password" name="password" required />
+                </div>
+                    <div class="item">
+                        <label for="phone">Phone<span>*</span></label>
+                        <input id="phone" type="tel" placeholder="number" name="phone" required />
+                    </div>
+                    <div class="item">
+                        <label for="region">Region<span>*</span></label><br>
+                        <select  placeholder="region" type="text" id="region"  name="region" >
+                            <option value="">--Please choose an option--</option>
+                            <option value="north">North</option>
+                            <option value="south">South</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="zip">Branch<span>*</span></label>
+                        <input id="zip" type="text" placeholder="branch" name="branch" required />
+                    </div>
+                  
+                </div>
+            </fieldset>
+            <div id="submit">
+                <button type="submit" href="/">Submit</button>
+            </div>
+          
+    </div>
+    </form>
+    
+   
+</body>
+
+</html>

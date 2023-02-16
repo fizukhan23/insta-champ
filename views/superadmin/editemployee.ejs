@@ -1,0 +1,139 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+<%- include('partials/sidebar') %>
+
+<div>
+    <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Edit Employee</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href=<%= baseURL %>/superadmin-login/>Home</a></li>
+              <li class="breadcrumb-item active">Edit Employee Form</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6" style="margin-left:150px;">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Edit Employee</h3>
+              </div>
+              <!-- /.card-header -->
+          <!-- form start -->
+    
+           <form action="<%= baseURL%>/superadmin-login/edit-employee/<%=employee.id%>" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" class="form-control"  placeholder="employeename" name="name" value="<%=employee.name%>">
+                  </div> 
+                  <div class="form-group">
+                    <label for="Mobile Number">Mobile Number</label>
+                    <input type="text" class="form-control"  placeholder="Mobile Number" name="mobile" value="<%=employee.mobile%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="Name">Father Name</label>
+                    <input type="text" class="form-control"  placeholder="Father Name" name="father_name" value="<%=employee.father_name%>">
+                  </div> 
+                   <div class="form-group">
+                    <label for="Email ID">Email ID</label>
+                    <input type="text" class="form-control"  placeholder="Email ID" name="email" value="<%=employee.email%>">
+                  </div>  
+                <div class="form-group">
+                   <label value="<%=employee.gender%>">  
+                   Gender::   
+                    </label>  <br>  
+                    <input type="radio"  id="gender" name="gender" value="male" /> Male   
+                     <input type="radio" id="gender" name="gender" value="female"/> Female <br/> 
+                  </div>
+                    
+                  <div class="form-group">
+                    <label for="DOB">DOB</label>
+                    <input type="date" class="form-control"  placeholder="Date Of Birth" name="dob" value="<%=employee.dob%>">
+                  </div>
+                  <div class="form-group">
+                   <label>  
+                    Merital status:   
+                    </label>  <br>  
+                    <input type="radio" id="martial_status" name="martial_status" value="merride"/> Merride   
+                    <input type="radio" id="martial_status" name="martial_status" value="unmerride"/> Unmerride <br/> 
+                  </div>
+                  <div class="form-group">
+                    <label for="Address">Address</label>
+                    <input type="text" class="form-control"  placeholder="Address" name="address" value="<%=employee.address%>">
+                  </div>
+                   <div class="form-group">
+                    <label for="Pincode">Pincode</label>
+                    <input type="text" class="form-control"  placeholder="Pincode" name="pincode" value="<%=employee.pincode%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" class="form-control"  placeholder="City" name="city" value="<%=employee.city%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="State">State</label>
+                    <input type="text" class="form-control"  placeholder="State" name="state" value="<%=employee.state%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="Pan Card">Pan Card</label>
+                    <input type="text" class="form-control"  placeholder="Pan Card" name="pan_card" value="<%=employee.pan_card%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="Aadhar Card">Aadhar Card</label>
+                    <input type="text" class="form-control"  placeholder="Aadhar Card" name="aadhar_card" value="<%=employee.aadhar_card%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="Passport Photo">Passport Photo</label>
+                    <input type="file" class="form-control"  placeholder="Passport Photo" name="passport_photo" enctype="multipart/form-data" value="<%=employee.passport_photo%>">
+                  </div>
+                   <div class="form-group">
+                    <label for="Position">Position</label>
+                    <input type="text" class="form-control"  placeholder="Position" name="position" value="<%=employee.position%>">
+                  </div>
+                   <div class="form-group">
+                    <label for="Salary">Salary</label>
+                    <input type="text" class="form-control"  placeholder="Salary" name="salary" value="<%=employee.salary%>">
+                  </div>
+                    <div class="form-group">
+                    <label for="Joining Date">Joining Date</label>
+                    <input type="date" class="form-control"  placeholder="Joining Date" name="joining_date" value="<%=employee.joining_date%>">
+                  </div>
+                    <div class="form-group">
+                    <label for="Salary Date">Salary Date</label>
+                    <input type="date" class="form-control"  placeholder="Salary Date" name="salary_date" value="<%=employee.salary_date%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="location">location</label>
+                   <select class="form-control"  placeholder="location" name="location" id="cars" value="<%=employee.location%>">
+                                  <option value="">-please select-</option>
+                                  <option value="North">North</option>
+                                  <option value="South">South</option>
+                                 
+                                </select>
+                  </div>
+                  </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                   <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+<%- include('partials/footer') %> 

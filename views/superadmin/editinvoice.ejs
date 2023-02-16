@@ -1,0 +1,99 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+<%- include('partials/sidebar') %>
+
+<div>
+    <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Edit Invoice</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href=<%= baseURL %>/superadmin-login/>Home</a></li>
+              <li class="breadcrumb-item active">Edit invoice Form</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6" style="margin-left:150px;">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Edit Invoice</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+    
+          <form action="<%= baseURL%>/superadmin-login/edit-invoice/<%= invoice.uid%>" method="post">
+                <div class="card-body">
+                   <div class="form-group">
+                    <label for="Date">Date<span>*</span></label>
+                    <input type="Date" class="form-control"  placeholder="Date" name="date" value="<%=invoice.date%>"  required>
+                  </div>
+                   <div class="form-group">
+                    <label for="Buyer Name">Recipt Number<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Recipt number" name="Re_number" value="<%=invoice.Re_number%>" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="Buyer Name">Issued To<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Buyer Name" name="buyer_name" value="<%=invoice.buyer_name%>" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Amount">Amount Paid<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Amount" name="amount" value="<%=invoice.amount%>" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="paid_on">Paid on<span>*</span></label>
+                    <input type="date" class="form-control"  placeholder="paid on" name="paid_on" value="<%=invoice.paid_on%>" required>
+                  </div>  
+                  <div class="form-group">
+                    <label for="description">Description<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="invoicedata" name="invoicedata" value="<%=invoice.invoicedata%>" required>
+                  </div>   
+                 <div class="form-group">
+                    <label for="Quantity">Quantity<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="quantity" name="quantity" value="<%=invoice.quantity%>" required>
+                  </div>
+                  
+                   <div class="form-group">
+                    <label for="Product">Price<span>*</span></label>
+                    <input type="text" class="form-control"  placeholder="Product" name="product" value="<%=invoice.product%>" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="GST">GST<span>*</span></label>
+                    <input id="gst" type="text" class="form-control"  placeholder="GST" name="gst" value="<%=invoice.gst%>" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="GST">Sub total<span>*</span></label>
+                    <input id="sub_total" type="text" class="form-control"  placeholder="sub_total" name="sub_total" value="<%=invoice.sub_total%>" required>
+                  </div>
+                <div class="form-group">
+                    <label for="Total Price">Total Price<span>*</span></label>
+                    <input id = "total_price" type="text" class="form-control"  placeholder="Total Price" name="total_price" value="<%=invoice.total_price%>" required >
+                  </div>
+                 </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" name="submit" onclick="sum()" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+</div>
+
+
+<%- include('partials/footer') %> 

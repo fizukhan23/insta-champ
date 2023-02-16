@@ -1,0 +1,91 @@
+<%- include('partials/header') %>
+
+<%- include('partials/navbar') %>
+
+<%- include('partials/sidebar') %>
+
+
+<div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2" >
+          <div class="col-sm-6">
+            <h1>View user</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="<%= baseURL %>/superadmin-login/">Home</a></li>
+              <li class="breadcrumb-item active">View user </li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+ <!-- Main content -->
+  
+    <section class="content">
+      <div class="container-fluid"> 
+
+
+<div class="row">
+          <!-- left column-->
+          <div class="col-md-24" style="padding:15px;">
+            <!--general form elements -->
+            <div class="card card-primary" >
+              <div class="card-header" >
+                <h3 class="card-title">View User</h3>
+              </div>
+              <!-- /.card-header -->
+               
+                <table class="table table-bordered" >
+                <thead>
+                    <th style="width:2px">SNO</th>
+                    <th>FULL NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE NUMBER</th>
+                    <th>REGION</th>
+                    <th>BRANCH</th>
+                    <th>PHOTO</th>
+                    <th>OFFICE PHOTO</th>
+                    <th>RENT AGREEMENT DOCUMNET</th>
+                    <th>FULL ADDRESS</th>
+                   <th style="width: 40px">ACTION</th>
+</thead>
+<tbody>
+ <% adminregistration.forEach(function(adminregistration,index){ %>
+            <tr>
+                <td><%= index+1 %></td>
+                <td><%= adminregistration.fullname%></td>
+                <td><%= adminregistration.email%></td>
+                <td><%= adminregistration.phone%></td>
+                <td><%= adminregistration.region%></td>
+                <td><%= adminregistration.branch%></td>
+                <td>
+                <img src=<%= adminregistration.photo %> width="80px;" height="100px;">
+                </td>
+                <td>
+                <img src=<%= adminregistration.ophoto %> width="80px;" height="100px;">
+                </td>
+                <td>
+                <img src=<%= adminregistration.Rdocument %> width="80px;" height="100px;">
+                </td>
+                <td><%= adminregistration.faddress%></td>
+                <td>
+           <a href="<%= baseURL %>/superadmin-login/loginlist-delete/<%=adminregistration.sno%>" class="btn btn-block btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+              <br>
+              <a href="https://api.whatsapp.com/send?text={{ You Have Verified }}"
+              data-action="share/whatsapp/share" 
+ class="btn btn-lg btn-floating btn-success"><i class="fa-brands fa-whatsapp"></i></a>
+              </td>
+            </tr>
+    <% }); %>
+          
+
+</tbody>
+
+</table> 
+
+<%- include('partials/footer') %>
+
+

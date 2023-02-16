@@ -1,0 +1,803 @@
+ <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light">Insta Champ</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                               with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-user-gear"></i>
+                                <p>
+                                    User Management
+                                    <i class="fas fa-angle-left right"></i>
+
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                               
+                                <li class="nav-item">
+                                    <a href="<%=  %>/superadmin-login/user-list/" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>List User's</p>
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Expire user list</p>
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="<%=  %>/superadmin-login/primeuser-list/" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Top-up Userlist</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=  %>/superadmin-login/verifyuser-list/" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Verify & Approve User</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Payment User</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=  %>/superadmin-login/paymentuser-list/" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Verify screenshots</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=  %>/superadmin-login/kycverification-list" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>KYC Verification</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create Rate chart</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Transaction</p>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Block & Unblock</p>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+                       
+                       
+                       <li class="nav-item">
+                            <a href="<%=  %>/superadmin-login/franchisee" class="nav-link">
+
+                                 <i class="fa-brands fa-first-order-alt"></i>
+                                <p>
+                                    create franchisee
+
+                                </p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-brands fa-first-order-alt"></i>
+                                <p>
+                                    Franchisee Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                    
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>list North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/franchiseelist" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Check Franchaise</p>
+                                         </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Check Commition</p>
+                                    </a>
+                                </li>
+                                   <li class="nav-item">
+                                    <a href="/user-offer" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create Offers</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/get-employeenorth" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Employee</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/get-employeelistnorth" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>list Employee</p>
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Branch</p>
+                                    </a>
+                                </li>
+                                   <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Registrations</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Register</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>list South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/franchiseelists" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Check Franchaise</p>
+                                         </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Check Commition</p>
+                                    </a>
+                                </li>
+                                   <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/user-offer" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create Offers</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/get-employee" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Employee</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/get-employeelist" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>list Employee</p>
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Branch</p>
+                                    </a>
+                                </li>
+                                   <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Registrations</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Register</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>  
+                                
+                                
+                                <!--<li class="nav-item">-->
+                                <!--    <a href="#" class="nav-link">-->
+                                <!--        <i class="far fa-circle nav-icon"></i>-->
+                                <!--        <p>Check Distributor</p>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                                <!--<li class="nav-item">-->
+                                <!--    <a href="#" class="nav-link">-->
+                                <!--        <i class="far fa-circle nav-icon"></i>-->
+                                <!--        <p>Check Commition</p>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                                <!--<li class="nav-item">-->
+                                <!--    <a href="#" class="nav-link">-->
+                                <!--        <i class="far fa-circle nav-icon"></i>-->
+                                <!--        <p>Create Offers</p>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                                <!--<li class="nav-item">-->
+                                <!--    <a href="#" class="nav-link">-->
+                                <!--        <i class="far fa-circle nav-icon"></i>-->
+                                <!--        <p>Add Employee</p>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                                <!-- <li class="nav-item">-->
+                                <!--    <a href="#" class="nav-link">-->
+                                <!--        <i class="far fa-circle nav-icon"></i>-->
+                                <!--        <p>View Branch</p>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                                <!--   <li class="nav-item">-->
+                                <!--    <a href="#" class="nav-link">-->
+                                <!--        <i class="far fa-circle nav-icon"></i>-->
+                                <!--        <p>View Registrations</p>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                                <!--<li class="nav-item">-->
+                                <!--    <a href="#" class="nav-link">-->
+                                <!--        <i class="far fa-circle nav-icon"></i>-->
+                                <!--        <p>View Register</p>-->
+                                <!--    </a>-->
+                                <!--</li>-->
+                           <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-video"></i>
+                                <p>
+                                    Demo Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>list Demo</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/user-demo" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>list Demo</p>
+                                         </a>
+                                </li>
+                                      
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li> 
+                           <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-sharp fa-solid fa-file-lines"></i>
+                                <p>
+                                    Invoice Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add invoice</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/invoice-user-list/" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add invoice</p>
+                                         </a>
+                                </li>
+                                      
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>
+                         
+                         
+                         
+                         
+                         
+                 
+                        
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                               <i class="fa-solid fa-code-branch"></i>
+                                <p>
+                                    Branch Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                             <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>list North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/Registrationlistnorth" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Verify document </p>
+                                         </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/loginlistnorth" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Upload document</p>
+                                    </a>
+                                </li>
+                                   <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin plan Expair</p>
+                                    </a>
+                                </li>
+                             
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>list South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/Registrationlist" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Verify document </p>
+                                         </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/loginlist" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Upload document</p>
+                                    </a>
+                                </li>
+                                   <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin plan Expair</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>  
+                        
+                       
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-list-check"></i>
+                                <p>
+                                   Task Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create Task</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                    <a href=" <%=   %>/superadmin-login/social-task" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Social Task</p>
+                                         </a>
+                                </li>  
+                                 <li class="nav-item">
+                                    <a href=" <%=   %>/superadmin-login/task-user-list" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create Task</p>
+                                         </a>
+                                </li>
+                                    
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>  
+                        
+                        
+                     <li class="nav-item">
+                            <a href="#" class="nav-link">
+                               <i class="fa-solid fa-paper-plane"></i>
+                                <p>
+                                   Plan Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create Plan</p>
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Free list Plan</p>
+                                    </a>
+                                </li>      
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/user-plan" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create Plan</p>
+                                         </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Free list Plan</p>
+                                    </a>
+                                </li>       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>     
+                        
+                  
+                      
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-list-check"></i>
+                                <p>
+                               Notification Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create notification</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create notification</p>
+                                         </a>
+                                </li>
+                                      
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>   
+                       
+              
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-certificate"></i>
+                                <p>
+                             certificate Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add certificate</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/certificate-user-list" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add certificate</p>
+                                         </a>
+                                </li>
+                                      
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>   
+                        
+                   
+                      <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-table"></i>
+                                <p>
+                              Report Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Report</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/report-user-list/" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>View Report</p>
+                                         </a>
+                                </li>
+                                      
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li>   
+                         <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-wallet"></i>
+                                <p>
+                                    Wallet Management
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                          <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>North</p>
+                                         </a>
+                                        <!--start list-->
+                             <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Wallet List</p>
+                                    </a>
+                                </li>
+                                       
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                         <i class="nav-icon far fa-circle text-info"></i>
+                                        <p>South</p>
+                                    </a>
+                                    <!--start list-->
+                                    <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                    <a href="<%=   %>/superadmin-login/wallet-user-list" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Wallet List</p>
+                                         </a>
+                                </li>
+                                      
+                            </ul>
+                            <!--end list-->
+                                </li>
+                                       
+                            </ul>
+                        </li> 
+                            
+                        
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <p>
+                                    Logout
+
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
